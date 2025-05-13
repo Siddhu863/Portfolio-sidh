@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
+  <title>Siddhu Kallakuri – Web Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- Navigation -->
   <header id="main-header">
-    <h1>🌟 My Portfolio</h1>
+    <h1>🌟 Siddhu Kallakuri</h1>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -19,125 +19,133 @@
         <li><a href="#media">Media</a></li>
       </ul>
     </nav>
-    <hr/>
   </header>
 
-  <!-- Home Page -->
-  <section id="home">
+  <!-- Home Section -->
+  <section id="home" class="section">
     <h2>🏠 Home</h2>
-    <p>Hello! I'm [Your Name], a web developer passionate about crafting clean and creative user interfaces. I love working with modern web technologies and designing engaging digital experiences.</p>
+    <p>Hello! I'm Siddhu Kallakuri, a passionate web developer dedicated to creating clean, intuitive, and visually engaging user interfaces. I specialize in building responsive and dynamic web experiences using modern technologies. My goal is to craft meaningful digital solutions that are both aesthetically appealing and functionally robust.</p>
   </section>
 
-  <hr/>
-
-  <!-- Projects Page -->
-  <section id="projects">
+  <!-- Projects Section -->
+  <section id="projects" class="section">
     <h2>💼 Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <h3>1. Personal Portfolio</h3>
+        <p>This is my personal portfolio showcasing my skills and works.</p>
+        <a href="#">Visit Project</a>
+      </article>
 
-    <article class="project-card">
-      <h3>1. Personal Portfolio</h3>
-      <img src="https://via.placeholder.com/200" alt="Portfolio Project Image" />
-      <p>This is my personal portfolio showcasing my skills and works.</p>
-      <a href="#">Visit Project</a>
-    </article>
+      <article class="project-card">
+        <h3>2. Weather App</h3>
+        <p>A simple weather application using HTML, CSS, and API to show real-time data.</p>
+        <a href="#">View on GitHub</a>
+      </article>
 
-    <article class="project-card">
-      <h3>2. Weather App</h3>
-      <img src="https://via.placeholder.com/200" alt="Weather App Image" />
-      <p>A simple weather application using HTML, CSS, and API to show real-time data.</p>
-      <a href="#">View on GitHub</a>
-    </article>
-
-    <article class="project-card">
-      <h3>3. To-Do List</h3>
-      <img src="https://via.placeholder.com/200" alt="To-Do App Image" />
-      <p>A basic to-do list to track daily tasks with local storage functionality.</p>
-      <a href="#">Launch App</a>
-    </article>
+      <article class="project-card">
+        <h3>3. To-Do List</h3>
+        <p>A basic to-do list to track daily tasks with local storage functionality.</p>
+        <a href="#">Launch App</a>
+      </article>
+    </div>
 
     <!-- Project Summary Table -->
     <h3>📊 Project Table</h3>
-    <table id="project-table">
-      <thead>
-        <tr>
-          <th>Project Name</th>
-          <th>Description</th>
-          <th>Technology Used</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Portfolio</td>
-          <td>Online portfolio with media and contact sections</td>
-          <td>HTML, CSS</td>
-          <td>✅ Completed</td>
-        </tr>
-        <tr>
-          <td>Weather App</td>
-          <td>Weather app using API for real-time data</td>
-          <td>HTML, CSS, JS</td>
-          <td>⚙️ In Progress</td>
-        </tr>
-        <tr>
-          <td>To-Do List</td>
-          <td>App to manage daily tasks with local storage</td>
-          <td>HTML, CSS, JS</td>
-          <td>✅ Completed</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-container">
+      <table id="project-table">
+        <thead>
+          <tr>
+            <th>Project Name</th>
+            <th>Description</th>
+            <th>Technology Used</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Portfolio</td>
+            <td>Online portfolio with media and contact sections</td>
+            <td>HTML, CSS</td>
+            <td>✅ Completed</td>
+          </tr>
+          <tr>
+            <td>Weather App</td>
+            <td>Weather app using API for real-time data</td>
+            <td>HTML, CSS, JS</td>
+            <td>⚙️ In Progress</td>
+          </tr>
+          <tr>
+            <td>To-Do List</td>
+            <td>App to manage daily tasks with local storage</td>
+            <td>HTML, CSS, JS</td>
+            <td>✅ Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <hr/>
-
-  <!-- Contact Page -->
-  <section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="section">
     <h2>📬 Contact</h2>
     <form>
-      <label for="name">Name:</label><br/>
-      <input type="text" id="name" name="name" required /><br/><br/>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+      </div>
 
-      <label for="email">Email:</label><br/>
-      <input type="email" id="email" name="email" required /><br/><br/>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your mail-id" required />
+      </div>
 
-      <label for="message">Message:</label><br/>
-      <textarea id="message" name="message" rows="4" required></textarea><br/><br/>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+      </div>
 
-      <label for="reason">Reason for Contact:</label><br/>
-      <select id="reason" name="reason">
-        <option value="project">Project Collaboration</option>
-        <option value="feedback">Feedback</option>
-        <option value="other">Other</option>
-      </select><br/><br/>
+      <div class="form-group">
+        <label for="reason">Reason for Contact:</label>
+        <select id="reason" name="reason">
+          <option value="project">Project Collaboration</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
 
-      <button type="submit">Send Message</button>
+      <div class="form-group">
+        <button type="submit">Send Message</button>
+      </div>
     </form>
   </section>
 
-  <hr/>
+  <!-- Media Section -->
+  <section id="media" class="section">
+    <h2>🎵🎥 Media</h2>
+    <div class="media-content">
+      <div class="media-item">
+        <h3>My Favorite Song</h3>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
-  <!-- Media Page -->
-  <section id="media">
-    <h2>🎵🎥 Audio/Video</h2>
-
-    <h3>My Favorite Song</h3>
-    <audio controls>
-      <source src="your-favorite-song.mp3" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-
-    <h3>Self-Introduction Video</h3>
-    <video width="320" height="240" controls>
-      <source src="intro-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+      <div class="media-item">
+        <h3>Self-Introduction Video</h3>
+        <video width="320" height="240" controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </section>
 
-  <hr/>
-
+  
+  <!-- Footer -->
   <footer>
-    <p>© 2025 [Your Name]. All rights reserved.</p>
+    <p>© 2025 Siddhu Kallakuri. All rights reserved.</p>
   </footer>
 
 </body>
