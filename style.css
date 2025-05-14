@@ -1,4 +1,4 @@
-/* General Reset and Font */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header Section */
+
 #main-header {
   background-color: #1e272e;
   color: white;
@@ -45,7 +45,7 @@ nav a:hover {
   color: #ffffff;
 }
 
-/* Section Titles */
+
 .section h2 {
   font-size: 2rem;
   color: #34495e;
@@ -55,7 +55,7 @@ nav a:hover {
   text-align: center;
 }
 
-/* Home Section */
+
 #home p {
   font-size: 1.2rem;
   margin: 1em auto;
@@ -64,7 +64,7 @@ nav a:hover {
   text-align: center;
 }
 
-/* Projects Grid */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -102,7 +102,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Project Table */
+
 .table-container {
   overflow-x: auto;
   margin: 1em auto;
@@ -131,7 +131,7 @@ nav a:hover {
   background-color: #f1f2f6;
 }
 
-/* Contact Form */
+
 form {
   width: 80%;
   margin: 0 auto;
@@ -176,18 +176,18 @@ button[type="submit"]:hover {
   background-color: #2ecc71;
 }
 
-/* Media Section */
+
 .media-content {
   display: flex;
-  flex-direction: column; /* Stack items top-down */
+  flex-direction: column;
   gap: 2em;
   padding: 2em;
-  align-items: center; /* Optional: center each media-item horizontally */
+  align-items: center;
 }
 
 .media-item {
-  width: 100%; /* Full width */
-  max-width: 700px; /* Optional: limit max width for better readability */
+  width: 100%;
+  max-width: 700px;
   background-color: #ffffff;
   padding: 1.5em;
   border-radius: 10px;
@@ -200,7 +200,7 @@ button[type="submit"]:hover {
   color: #2c3e50;
 }
 
-/* Footer */
+
 footer {
   background-color: #1e272e;
   color: white;
@@ -210,7 +210,7 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Animations */
+
 .project-card,
 .media-item {
   animation: fadeInUp 1s ease forwards;
@@ -228,7 +228,7 @@ footer {
   }
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
