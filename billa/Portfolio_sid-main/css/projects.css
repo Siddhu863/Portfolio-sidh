@@ -1,0 +1,170 @@
+/* ===== PROJECTS FILTER ===== */
+.projects-filter {
+    padding: var(--spacing-xl) var(--spacing-xl) 0;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: rgba(127, 90, 240, 0.1);
+    border: 1px solid rgba(127, 90, 240, 0.2);
+    border-radius: var(--radius-md);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.filter-btn:hover {
+    background-color: rgba(127, 90, 240, 0.2);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ===== PROJECTS SHOWCASE ===== */
+.projects-showcase {
+    padding: var(--spacing-xl);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+}
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.project-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.project-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-features {
+    margin: var(--spacing-md) 0;
+}
+
+.project-features h4 {
+    margin-bottom: var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.project-features ul {
+    list-style-type: none;
+    padding-left: var(--spacing-md);
+}
+
+.project-features li {
+    position: relative;
+    padding-left: var(--spacing-md);
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-md) 0;
+}
+
+.project-tags span {
+    background-color: rgba(127, 90, 240, 0.2);
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: auto;
+    padding-top: var(--spacing-md);
+}
+
+/* ===== PROJECT PROCESS ===== */
+.project-process {
+    padding: var(--spacing-xxl) var(--spacing-xl);
+}
+
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+}
+
+.process-card {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+}
+
+.process-number {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    opacity: 0.7;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.process-content {
+    flex: 1;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+    padding: var(--spacing-xxl) var(--spacing-xl);
+}
+
+.cta-card {
+    text-align: center;
+    padding: var(--spacing-xxl);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-card p {
+    margin: var(--spacing-lg) 0;
+    font-size: 1.2rem;
+}

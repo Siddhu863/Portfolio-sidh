@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Kartheek Billa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <div class="noise-overlay"></div>
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="switch">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <header>
+        <div class="logo glitch-text" data-text="KB">KB</div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="projects.html" class="active nav-link">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="neo-glass-card page-header-content">
+                <h1 class="glitch-text" data-text="My Projects">My Projects</h1>
+                <p>Showcasing my creative work and technical skills</p>
+            </div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="mern">MERN Stack</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+            </div>
+        </section>
+
+        <section class="projects-showcase">
+            <div class="projects-grid">
+                <div class="neo-glass-card project-card animate-on-scroll" data-category="mern web">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/800x600')"></div>
+                    <div class="project-content">
+                        <h3>SoulFlex - Mental Training Platform</h3>
+                        <p>SoulFlex is a structured mental training platform aimed at improving focus, well-being, and self-growth. It offers guided mindfulness exercises, relaxing music, yoga postures, and Surya Namaskar for overall mental and emotional wellness.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Video-guided mindfulness exercises</li>
+                                <li>Music for stress relief</li>
+                                <li>Integrated Surya Namaskar</li>
+                                <li>Workouts and yoga posture guides with personalization</li>
+                                <li>Goal-setting and progress tracking</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span>MongoDB</span>
+                            <span>Express.js</span>
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">Live Demo</a>
+                            <a href="#" class="btn small secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="neo-glass-card project-card animate-on-scroll" data-category="mern web">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/800x600')"></div>
+                    <div class="project-content">
+                        <h3>Blood Donation & Supply Chain Management</h3>
+                        <p>Developed during the Hackoverflow Hackathon, this system enhances blood donation and supply chain transparency. It connects blood donors with hospitals and patients while ensuring secure, real-time tracking of donations.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Real-time donor-patient matching based on location and blood type</li>
+                                <li>Emergency response system for urgent blood requests</li>
+                                <li>Secure tracking of blood donations throughout the supply chain</li>
+                                <li>User-friendly interface for donors, hospitals, and patients</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span>MongoDB</span>
+                            <span>Express.js</span>
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">Live Demo</a>
+                            <a href="#" class="btn small secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="neo-glass-card project-card animate-on-scroll" data-category="ai mern">
+                    <div class="project-image" style="background-image: url('https://via.placeholder.com/800x600')"></div>
+                    <div class="project-content">
+                        <h3>AI-Powered Answer Sheet Evaluation</h3>
+                        <p>An AI-based system automating handwritten answer sheet evaluation using Optical Character Recognition (OCR) and deep learning. This solution minimizes manual grading efforts and ensures accurate assessment.</p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Automated grading of handwritten answers using OCR</li>
+                                <li>AI-driven accuracy and consistency in scoring</li>
+                                <li>Feedback generation for students based on answers</li>
+                                <li>Teacher-friendly dashboard for result verification</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span>Tesseract OCR</span>
+                            <span>MongoDB</span>
+                            <span>Express.js</span>
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Deep Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small">Live Demo</a>
+                            <a href="#" class="btn small secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-process">
+            <h2 class="section-title glitch-text" data-text="My Development Process">My Development Process</h2>
+            <div class="process-steps">
+                <div class="neo-glass-card process-card animate-on-scroll">
+                    <div class="process-number">01</div>
+                    <div class="process-content">
+                        <h3>Research & Planning</h3>
+                        <p>I begin each project with thorough research to understand the requirements, target audience, and potential challenges. This phase involves problem definition, competitor analysis, and creating a detailed project roadmap.</p>
+                    </div>
+                </div>
+                <div class="neo-glass-card process-card animate-on-scroll">
+                    <div class="process-number">02</div>
+                    <div class="process-content">
+                        <h3>Design & Architecture</h3>
+                        <p>Next, I design the system architecture and create wireframes to visualize the structure and user flow. This helps in identifying potential issues early in the development process and ensures a solid foundation.</p>
+                    </div>
+                </div>
+                <div class="neo-glass-card process-card animate-on-scroll">
+                    <div class="process-number">03</div>
+                    <div class="process-content">
+                        <h3>Development & Testing</h3>
+                        <p>With a clear plan in place, I move to the development phase, writing clean, efficient code. I follow test-driven development practices to ensure reliability and performance at every stage of the project.</p>
+                    </div>
+                </div>
+                <div class="neo-glass-card process-card animate-on-scroll">
+                    <div class="process-number">04</div>
+                    <div class="process-content">
+                        <h3>Deployment & Iteration</h3>
+                        <p>After thorough testing, I deploy the solution and gather user feedback. I believe in continuous improvement, so I iterate based on real-world usage and evolving requirements to enhance the product over time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="neo-glass-card cta-card animate-on-scroll">
+                <h2 class="glitch-text" data-text="Have a Project in Mind?">Have a Project in Mind?</h2>
+                <p>I'm always open to discussing new projects and creative ideas. Let's create something amazing together!</p>
+                <a href="index.html#contact" class="btn primary large">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo glitch-text" data-text="KB">KB</div>
+            <p>&copy; 2025 Kartheek Billa. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="education.html">Education</a>
+                <a href="projects.html">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projects-filter.js"></script>
+</body>
+</html>
