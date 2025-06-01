@@ -3,175 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Siddhu Kallakuri – Web Developer</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Login – Siddhu Kallakuri</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Space Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #7f53ac 0%, #647dee 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .login-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      filter: blur(8px) brightness(0.7);
+      z-index: 0;
+    }
+    .glass {
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255,255,255,0.18);
+    }
+    .login-container {
+      position: relative;
+      z-index: 1;
+      width: 350px;
+      max-width: 90vw;
+      padding: 2.5em 2em 2em 2em;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s;
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .login-header i {
+      font-size: 3rem;
+      color: #7f53ac;
+      margin-bottom: 0.5em;
+    }
+    .login-header h2 {
+      font-family: 'Orbitron', monospace;
+      color: #647dee;
+      margin-bottom: 0.2em;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .login-header p {
+      color: #333;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .form-group {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.22);
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+      transition: box-shadow 0.3s;
+    }
+    .form-group:focus-within {
+      box-shadow: 0 4px 16px rgba(127, 90, 240, 0.18);
+    }
+    .form-group label {
+      color: #7f53ac;
+      font-size: 1.2rem;
+      margin-right: 0.7em;
+    }
+    .form-group input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1.1rem;
+      flex: 1;
+      padding: 0.7em 0;
+      color: #2c3e50;
+    }
+    .form-group input::placeholder {
+      color: #aaa;
+      opacity: 1;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.8em 0;
+      background: linear-gradient(90deg, #7f53ac, #647dee);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #647dee, #7f53ac);
+      transform: translateY(-2px) scale(1.03);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 500px) {
+      .login-container {
+        padding: 1.2em 0.5em;
+        width: 98vw;
+      }
+    }
+  </style>
 </head>
-<body class="light-theme">
-
-  <!-- Header -->
-  <header id="main-header" class="glass">
-    <div class="header-content">
-      <div class="logo glitch" data-text="Siddhu">Siddhu Kallakuri</div>
-      <nav>
-        <ul>
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#media" class="nav-link">Media</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="theme-toggle">
-        <input type="checkbox" id="theme-switch" />
-        <label for="theme-switch" class="switch" title="Toggle dark mode">
-          <i class="fas fa-sun"></i>
-          <i class="fas fa-moon"></i>
-        </label>
-      </div>
+<body>
+  <div class="login-bg"></div>
+  <div class="login-container glass">
+    <div class="login-header">
+      <i class="fas fa-user-circle"></i>
+      <h2>Welcome Back</h2>
+      <p>Please login to continue</p>
     </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="section hero-section">
-    <div class="hero-card glass animate-fade-in">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Siddhu Kallakuri" class="profile-pic" />
-      <h1>Hi, I'm <span class="highlight">Siddhu Kallakuri</span></h1>
-      <p class="subtitle">Web Developer & UI Enthusiast</p>
-      <p class="quote">"Dreams don’t work unless you do — and education is where the work begins."</p>
-      <div class="social-icons">
-        <a href="#" class="social" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" class="social" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" class="social" title="Twitter"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section">
-    <h2 class="section-title">💼 Projects</h2>
-    <div class="projects-grid">
-      <article class="project-card glass animate-up">
-        <h3>Personal Portfolio</h3>
-        <p>My personal portfolio showcasing my skills and works.</p>
-        <a href="#" class="btn">Visit Project</a>
-      </article>
-      <article class="project-card glass animate-up" style="animation-delay: 0.1s;">
-        <h3>Weather App</h3>
-        <p>A weather application using HTML, CSS, and API to show real-time data.</p>
-        <a href="#" class="btn">View on GitHub</a>
-      </article>
-      <article class="project-card glass animate-up" style="animation-delay: 0.2s;">
-        <h3>To-Do List</h3>
-        <p>A to-do list to track daily tasks with local storage functionality.</p>
-        <a href="#" class="btn">Launch App</a>
-      </article>
-    </div>
-    <div class="table-container glass animate-fade-in">
-      <h3>📊 Project Table</h3>
-      <table id="project-table">
-        <thead>
-          <tr>
-            <th>Project Name</th>
-            <th>Description</th>
-            <th>Technology Used</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Portfolio</td>
-            <td>Online portfolio with media and contact sections</td>
-            <td>HTML, CSS</td>
-            <td>✅ Completed</td>
-          </tr>
-          <tr>
-            <td>Weather App</td>
-            <td>Weather app using API for real-time data</td>
-            <td>HTML, CSS, JS</td>
-            <td>⚙️ In Progress</td>
-          </tr>
-          <tr>
-            <td>To-Do List</td>
-            <td>App to manage daily tasks with local storage</td>
-            <td>HTML, CSS, JS</td>
-            <td>✅ Completed</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <h2 class="section-title">🛠️ Skills</h2>
-    <div class="skills-list glass animate-fade-in">
-      <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
-      <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
-      <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
-      <div class="skill"><i class="fab fa-react"></i> React</div>
-      <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
-      <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
-      <div class="skill"><i class="fas fa-database"></i> SQL</div>
-      <div class="skill"><i class="fas fa-paint-brush"></i> UI/UX</div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2 class="section-title">📬 Contact</h2>
-    <form class="glass animate-fade-in">
+    <form id="login-form" autocomplete="off">
       <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        <label for="username"><i class="fas fa-user"></i></label>
+        <input type="text" id="username" name="username" placeholder="Username" required />
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your mail-id" required />
+        <label for="password"><i class="fas fa-lock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Password" required />
       </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
-      </div>
-      <div class="form-group">
-        <label for="reason">Reason for Contact:</label>
-        <select id="reason" name="reason">
-          <option value="project">Project Collaboration</option>
-          <option value="feedback">Feedback</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn">Send Message</button>
-      </div>
+      <button type="submit" class="btn">Login</button>
     </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="glass">
-    <p>© 2025 Siddhu Kallakuri. All rights reserved.</p>
-  </footer>
-
-  <!-- Theme Switcher Script -->
+  </div>
   <script>
-    const themeSwitch = document.getElementById('theme-switch');
-    themeSwitch.addEventListener('change', function() {
-      document.body.classList.toggle('dark-theme');
-      document.body.classList.toggle('light-theme');
-    });
-
-    // Animate on scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.animate-up, .animate-fade-in').forEach(el => {
-      observer.observe(el);
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = "index.html"; // Redirect without authentication
     });
   </script>
 </body>
