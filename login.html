@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login – Siddhu Kallakuri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Space Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #7f53ac 0%, #647dee 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .login-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      filter: blur(8px) brightness(0.7);
+      z-index: 0;
+    }
+    .glass {
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(255,255,255,0.18);
+    }
+    .login-container {
+      position: relative;
+      z-index: 1;
+      width: 350px;
+      max-width: 90vw;
+      padding: 2.5em 2em 2em 2em;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s;
+    }
+    .login-header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .login-header i {
+      font-size: 3rem;
+      color: #7f53ac;
+      margin-bottom: 0.5em;
+    }
+    .login-header h2 {
+      font-family: 'Orbitron', monospace;
+      color: #647dee;
+      margin-bottom: 0.2em;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .login-header p {
+      color: #333;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2em;
+    }
+    .form-group {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.22);
+      border-radius: 8px;
+      padding: 0.5em 1em;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+      transition: box-shadow 0.3s;
+    }
+    .form-group:focus-within {
+      box-shadow: 0 4px 16px rgba(127, 90, 240, 0.18);
+    }
+    .form-group label {
+      color: #7f53ac;
+      font-size: 1.2rem;
+      margin-right: 0.7em;
+    }
+    .form-group input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 1.1rem;
+      flex: 1;
+      padding: 0.7em 0;
+      color: #2c3e50;
+    }
+    .form-group input::placeholder {
+      color: #aaa;
+      opacity: 1;
+    }
+    .btn {
+      width: 100%;
+      padding: 0.8em 0;
+      background: linear-gradient(90deg, #7f53ac, #647dee);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #647dee, #7f53ac);
+      transform: translateY(-2px) scale(1.03);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 500px) {
+      .login-container {
+        padding: 1.2em 0.5em;
+        width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-bg"></div>
+  <div class="login-container glass">
+    <div class="login-header">
+      <i class="fas fa-user-circle"></i>
+      <h2>Welcome Back</h2>
+      <p>Please login to continue</p>
+    </div>
+    <form id="login-form" autocomplete="off">
+      <div class="form-group">
+        <label for="username"><i class="fas fa-user"></i></label>
+        <input type="text" id="username" name="username" placeholder="Username" required />
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Password" required />
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      window.location.href = "index.html"; // Redirect without authentication
+    });
+  </script>
+</body>
+</html>
