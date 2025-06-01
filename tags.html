@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Elements Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(120deg, #7f53ac 0%, #647dee 100%);
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Space Mono', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+    }
+    .container {
+      background: rgba(255,255,255,0.10);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      border-radius: 18px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(255,255,255,0.18);
+      margin: 2em 0;
+      padding: 2.5em 2em 2em 2em;
+      max-width: 700px;
+      width: 95vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s;
+    }
+    h1 {
+      font-family: 'Orbitron', monospace;
+      font-size: 2.5rem;
+      color: #ffcc00;
+      margin-bottom: 0.5em;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 16px rgba(127, 90, 240, 0.25);
+      text-align: center;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #f5f7fa;
+      margin-bottom: 1.5em;
+      text-align: center;
+      line-height: 1.6;
+      background: rgba(127, 83, 172, 0.08);
+      padding: 1em 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+    }
+    .media-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 2em;
+      width: 100%;
+    }
+    .media-card {
+      background: rgba(255,255,255,0.18);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+      padding: 1.5em;
+      text-align: center;
+      min-width: 260px;
+      flex: 1 1 320px;
+      transition: background 0.3s, transform 0.3s;
+      color: #fff;
+    }
+    .media-card h2 {
+      color: #ffcc00;
+      margin-bottom: 1em;
+      font-size: 1.3rem;
+      font-family: 'Orbitron', monospace;
+    }
+    audio, video {
+      width: 100%;
+      outline: none;
+      border-radius: 8px;
+      margin-top: 0.5em;
+      background: #222;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+    }
+    .list-section {
+      margin: 2em 0 1em 0;
+      width: 100%;
+    }
+    ul, ol {
+      background: rgba(255,255,255,0.10);
+      padding: 1em 2em;
+      border-radius: 10px;
+      color: #fff;
+      margin-bottom: 1.5em;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+    }
+    li {
+      margin-bottom: 0.5em;
+      font-size: 1.1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,0.10);
+      margin-bottom: 2em;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+    }
+    th, td {
+      padding: 0.8em 1em;
+      text-align: center;
+      border-bottom: 1px solid #fff2;
+      color: #fff;
+    }
+    th {
+      background: #7f53ac;
+      color: #ffcc00;
+      font-family: 'Orbitron', monospace;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .btn {
+      display: inline-block;
+      margin: 1em 0 0 0;
+      padding: 0.7em 1.5em;
+      background: linear-gradient(90deg, #7f53ac, #647dee);
+      color: #fff;
+      border-radius: 8px;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(127, 90, 240, 0.08);
+      transition: background 0.3s, transform 0.2s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #647dee, #7f53ac);
+      transform: translateY(-2px) scale(1.03);
+      color: #ffcc00;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2em 0.5em;
+      }
+      .media-section {
+        flex-direction: column;
+        gap: 1em;
+      }
+      .media-card {
+        min-width: 180px;
+        padding: 1em;
+      }
+      table, th, td {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🌟 HTML Elements Showcase</h1>
+    <p>
+      Welcome! This page demonstrates various HTML elements styled beautifully with CSS.<br>
+      You'll find headings, paragraphs, lists, tables, audio, video, and more.<br>
+      Explore and enjoy the interactive, modern look!
+    </p>
+
+    <div class="media-section">
+      <div class="media-card">
+        <h2>🎵 Audio Example</h2>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="media-card">
+        <h2>🎬 Video Example</h2>
+        <video controls poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="list-section">
+      <h2 style="color:#ffcc00; font-family:'Orbitron',monospace;">Unordered List</h2>
+      <ul>
+        <li>HTML5 Semantic Tags</li>
+        <li>CSS3 Styling</li>
+        <li>Responsive Design</li>
+        <li>Media Elements</li>
+      </ul>
+      <h2 style="color:#ffcc00; font-family:'Orbitron',monospace;">Ordered List</h2>
+      <ol>
+        <li>Learn HTML</li>
+        <li>Practice CSS</li>
+        <li>Build Projects</li>
+        <li>Showcase Work</li>
+      </ol>
+    </div>
+
+    <h2 style="color:#ffcc00; font-family:'Orbitron',monospace;">Sample Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Element</th>
+          <th>Description</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;h1&gt;</td>
+          <td>Main Heading</td>
+          <td><strong>HTML Elements Showcase</strong></td>
+        </tr>
+        <tr>
+          <td>&lt;p&gt;</td>
+          <td>Paragraph</td>
+          <td>This is a paragraph.</td>
+        </tr>
+        <tr>
+          <td>&lt;audio&gt;</td>
+          <td>Audio Player</td>
+          <td>🎵</td>
+        </tr>
+        <tr>
+          <td>&lt;video&gt;</td>
+          <td>Video Player</td>
+          <td>🎬</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a href="#" class="btn">Explore More Elements</a>
+  </div>
+</body>
+</html>
